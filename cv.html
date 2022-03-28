@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>CodePen - Cours HTML CSS 15.2.1</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-1580f96ce81ff0a427cf57dda2748ce646c38efc201ae5942a29958cffa6856d.css" />
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+
+
+  <title>CodePen - Cours HTML CSS 15.2.1</title>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: var(--cp-font-family);
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; } /* $linkColorOnBlack */
+  </style>
+</head>
+
+<body class="">
+  <div class="referer-warning">
+    <h1>⚠️ Do not enter passwords or personal information on this page. ⚠️</h1>
+      This is a code demo posted by a web developer on <a href="https://codepen.io">codepen.io</a>.
+    <br />
+    A referer from CodePen is required to render this page view, and your browser is not sending one (<a href="https://blog.codepen.io/2017/10/05/regarding-referer-headers/" target="_blank">more details</a>).</h1>
+  </div>
+
+  <div id="result-iframe-wrap" role="main">
+
+    <iframe
+      id="result"
+      srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+
+  <meta charset=&quot;UTF-8&quot;>
+  
+<link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+<meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+<link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+<link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg&quot; color=&quot;#111&quot; />
+
+
+  <title>CodePen - Cours HTML CSS 15.2.1</title>
+  
+  
+  
+  
+<style>
+/*STYLES GENERAUX*/
+*{
+    font-family: Avenir, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    box-sizing: border-box;
+}
+body{
+    background: #ededed;
+}
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*HEADER &amp; FOOTER*/
+header, footer{
+    width: 100%;
+    padding: 20px 0px;
+    background: url(&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/cv-cover.jpg&quot;) #4f4f4f;
+    box-shadow: 0px 0px 15px #333;
+}
+header{
+    border-bottom: 2px solid #fff;
+    height: 120px;
+}
+header h1{
+    color: white;
+    font-size: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer{
+    border-top: 2px solid #fff;
+}
+footer p{
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+footer a{
+    color: #fff;
+}
+
+/*SECTIONS*/
+section{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #bbb;
+    background-color: #fff;
+}
+
+section h2{
+    margin: 20px 0;
+    width: 90%;
+}
+section > div{
+    width: 90%;
+}
+
+/*SECTION INFOS*/
+.photo{
+    text-align: center;
+}
+.photo img{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px #777;
+    border-radius: 50%;
+    margin-top: -80px;
+}
+.prez{
+    border-bottom: 2px dashed #ccc;
+}
+.prez a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 30px auto;
+    color: #fff;
+    background-color: #EA0;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5px;
+}
+.contact-flex{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.contact-flex p:first-child{
+    flex: 0 0 40%;
+}
+.contact-flex p:last-child{
+    flex: 0 0 60%;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0px auto;
+}
+.social img{
+    width: 40px;
+    height: 40px;
+}
+
+/*SECTION EXP ET FORMATION*/
+.exp{
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.exp-info{
+    display: flex;
+    flex-flow: column wrap;
+}
+.exp-logo{
+    flex: 0 0 25%;
+    max-width: 100px;
+}
+.exp-info{
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+.exp img{
+    width: 100%;
+}
+.exp h3{
+    font-size:  1.2em;
+}
+.exp h4{
+    font-size:  1em;
+    font-weight: normal;
+}
+
+/*SECTION COMPETENCES*/
+.h3gauche{
+    width: 90%;
+}
+.comp{
+    display:flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+}
+.comp p{
+    flex: 0 0 40%;
+}
+.conteneur-barre{
+    flex: 0 0 60%;
+    border-radius: 5px;
+    background-color: grey;
+    border-bottom: 1px ridge grey;
+}
+.barre{
+    display: block;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.c85{
+    width: 85%;
+    background-color: #8B8;
+}
+.c90{
+    width: 90%;
+    background-color: #4B8;
+}
+.c95{
+    width: 95%;
+    background-color: #4B8;
+}
+.c100{
+    width: 100%;
+    background-color: #4B8;
+    border-radius: 5px;
+}
+.comp2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.conteneur-barre2{
+    flex: 0 0 100%;
+    height: 0.5em;
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+/*SECTION INTERETS*/
+.interet{
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.interet img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+}
+
+/*VERSION BUREAU DU CV*/
+@media screen and (min-width: 980px){
+    section{
+        width: 80%;
+        box-shadow: 0px 0px 10px #bbb;
+    }
+    a:hover{
+        color: #EA0;
+    }
+    header h1{
+        width: 80%;
+    }
+    .prez, .contact{
+        flex: 0 0 45%;
+    }
+    .prez{
+        border-bottom: none;
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-left: auto;
+    }
+    .contact{
+        padding-left: 20px;
+        margin-right: auto;
+    }
+    .prez a{
+        border: 2px solid transparent;
+    }
+    .prez a:hover{
+        color: #f28835;
+        background-color: #fff;
+        border: 2px solid #f28835;
+        box-shadow: 0px 0px 20px #666;
+    }
+    .exp-logo{
+        flex: 0 0 10%;
+    }
+    .exp-info, .exp-desc{
+        flex: 0 0 85%;
+        margin-left: auto;
+    }
+    .interet{
+        flex: 0 1 25%;
+    }
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+
+
+</head>
+
+<body translate=&quot;no&quot; >
+  <head>
+    <title>CV de Ismaila Sow</title>
+    <meta charset=&quot;utf-8&quot;>
+    <meta name=&quot;viewport&quot;
+          content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot;>
+    <link rel=&quot;stylesheet&quot; href=&quot;cv.css&quot;>
+</head>
+<body>
+    <header>
+        <h1>CV de Ismaila Sow</h1>
+    </header>
+    
+    <section>
+        <div class=&quot;photo&quot;>
+            <img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/cv-profil.jpg&quot; alt=&quot;Ma photo de profil&quot;>
+        </div>
+        <div class=&quot;prez&quot;>
+            <h2>Qui suis-je ?</h2>
+            <p>Diplômé d'un master 2 &quot;Entrepreneuriat et Innovation&quot; (Programme Grande
+            Ecole EDHEC), je me tourne ensuite vers le développement informatique et les
+            thématiques liées au web comme l'optimisation du référencement (SEO).</p>
+            <a href=&quot;#&quot; download>Télécharger mon CV</a>
+        </div>
+        <div class=&quot;contact&quot;>
+            <h2>Informations de contact</h2>
+            <div class=&quot;contact-flex&quot;>
+                <p>Nom : </p>
+                <p>GIRAUD Pierre</p>
+            </div>
+            <div class=&quot;contact-flex&quot;>
+                <p>Adresse : </p>
+                <p>115 Avenue des Lilas - 83000 Toulon</p>
+            </div>
+            <div class=&quot;contact-flex&quot;>
+                <p>Téléphone :</p>
+                <p>06 36 65 65 65</p>
+            </div>
+            <div class=&quot;contact-flex&quot;>
+                <p>Mail : </p>
+                <p><a href=&quot;mailto:pierre.giraud@edhec.com&quot;>pierre.giraud@edhec.com</a></p>
+            </div>
+            <div class=&quot;contact-flex&quot;>
+                <p>Permis :</p>
+                <p>B</p>
+            </div>
+            <div class=&quot;social&quot;>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/fb.png&quot; alt=&quot;Logo Fb&quot;></a>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/tw.png&quot; alt=&quot;Logo Tw&quot;></a>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/lk.png&quot; alt=&quot;Logo Lk&quot;></a>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/yt.png&quot; alt=&quot;Logo Yt&quot;></a>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Expériences professionnelles</h2>
+        <div class=&quot;exp&quot;>
+            <div class=&quot;exp-logo&quot;>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/pierre.png&quot; alt=&quot;Logo de Pierre Giraud&quot;></a>
+            </div>
+            <div class=&quot;exp-info&quot;>
+                <h3>Créateur</h3>
+                <h4>Pierre Giraud</h4>
+                <h4>Avril 2014 - Aujourd'hui</h4>
+            </div>
+            <div class=&quot;exp-desc&quot;>
+                <p>Créateur des sites pierre-giraud.fr puis pierre-giraud.com
+                début 2015 sur lesquels je partage mes formations complète en
+                programmation, optimisation du référencement, etc.</p>
+            </div>
+        </div>
+        <div class=&quot;exp&quot;>
+            <div class=&quot;exp-logo&quot;>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/legalplace.png&quot; alt=&quot;Logo de LegalPlace&quot;></a>
+            </div>
+            <div class=&quot;exp-info&quot;>
+                <h3>Responsable SEO et contenu</h3>
+                <h4>LegalPlace</h4>
+                <h4>Novembre 2017 - Décembre 2018</h4>
+            </div>
+            <div class=&quot;exp-desc&quot;>
+                <p>Responsable SEO du site et plus globalement de la stratégie
+                de production de contenu : recherche de mots clefs, réécriture,
+                contrôle qualité du contenu publié, etc.</p>
+            </div>
+        </div>
+        <div class=&quot;exp&quot;>
+            <div class=&quot;exp-logo&quot;>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/prestashop.png&quot; alt=&quot;Logo de PrestaShop&quot;></a>
+            </div>
+            <div class=&quot;exp-info&quot;>
+                <h3>Stage marketing</h3>
+                <h4>PrestaShop</h4>
+                <h4>Mai 2013 - Novembre 2013</h4>
+            </div>
+            <div class=&quot;exp-desc&quot;>
+                <p>Contrôle de la qualité et de l'intégrité des modules proposés,
+                modernisation de la marketplace &amp; passerelle avec la communauté.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Formation</h2>
+        <div class=&quot;exp&quot;>
+            <div class=&quot;exp-logo&quot;>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/edhec.png&quot; alt=&quot;Logo EDHEC&quot;></a>
+            </div>
+            <div class=&quot;exp-info&quot;>
+                <h3>EDHEC Programme Grande Ecole</h3>
+                <h4>2011 - 2015</h4>
+            </div>
+            <div class=&quot;exp-desc&quot;>
+                <p>blablabla</p>
+            </div>
+        </div>
+        <div class=&quot;exp&quot;>
+            <div class=&quot;exp-logo&quot;>
+                <a href=&quot;#&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/dd.png&quot; alt=&quot;Logo Dumont&quot;></a>
+            </div>
+            <div class=&quot;exp-info&quot;>
+                <h3>Prépa ECS option Maths</h3>
+                <h4>2009 - 2011</h4>
+            </div>
+            <div class=&quot;exp-desc&quot;>
+                <p>blablabla</p>
+            </div>
+        </div>
+        <div class=&quot;exp&quot;>
+            <div class=&quot;exp-logo&quot;>
+                <a href=&quot;&quot;><img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/dd.png&quot; alt=&quot;&quot;></a>
+            </div>
+            <div class=&quot;exp-info&quot;>
+                <h3>Bac S option Maths</h3>
+                <h4>2005 - 2009</h4>
+            </div>
+            <div class=&quot;exp-desc&quot;>
+                <p>blablabla</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Compétences</h2>
+        <h3 class=&quot;h3gauche&quot;>Professionnelles</h3>
+        <div class=&quot;comp&quot;>
+            <p>HTML / CSS</p>
+            <div class=&quot;conteneur-barre&quot;><span class=&quot;barre c100&quot;></span></div>
+        </div>
+        <div class=&quot;comp&quot;>
+            <p>PHP / MySQL</p>
+            <div class=&quot;conteneur-barre&quot;><span class=&quot;barre c95&quot;></span></div>
+        </div>
+        <div class=&quot;comp&quot;>
+            <p>JavaScript</p>
+            <div class=&quot;conteneur-barre&quot;><span class=&quot;barre c90&quot;></span></div>
+        </div>
+        <div class=&quot;comp&quot;>
+            <p>SEO</p>
+            <div class=&quot;conteneur-barre&quot;><span class=&quot;barre c100&quot;></span></div>
+        </div>
+        <h3 class=&quot;h3gauche&quot;>Personnelles</h3>
+        <div class=&quot;comp2&quot;>
+            <p>Créativité</p>
+            <p>90%</p>
+            <div class=&quot;conteneur-barre2&quot;><span class=&quot;barre c90&quot;></span></div>
+        </div>
+        <div class=&quot;comp2&quot;>
+            <p>Adaptation</p>
+            <p>85%</p>
+            <div class=&quot;conteneur-barre2&quot;><span class=&quot;barre c85&quot;></span></div>
+        </div>
+        <div class=&quot;comp2&quot;>
+            <p>Sérieux</p>
+            <p>95%</p>
+            <div class=&quot;conteneur-barre2&quot;><span class=&quot;barre c95&quot;></span></div>
+        </div>
+        <div class=&quot;comp2&quot;>
+            <p>Pédagogie</p>
+            <p>95%</p>
+            <div class=&quot;conteneur-barre2&quot;><span class=&quot;barre c95&quot;></span></div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Centres d'intérêt</h2>
+        <figure class=&quot;interet&quot;>
+            <img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/trail.png&quot; alt=&quot;Trail&quot;>
+            <figcaption>Trail</figcaption>
+        </figure>
+        <figure class=&quot;interet&quot;>
+            <img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/cuisine.jpg&quot; alt=&quot;Cuisine&quot;>
+            <figcaption>Cuisine</figcaption>
+        </figure>
+        <figure class=&quot;interet&quot;>
+            <img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/gaming.jpg&quot; alt=&quot;Gaming&quot;>
+            <figcaption>Jeux vidéos</figcaption>
+        </figure>
+        <figure class=&quot;interet&quot;>
+            <img src=&quot;https://www.pierre-giraud.com/wp-content/uploads/2019/07/livre.jpg&quot; alt=&quot;Littérature&quot;>
+            <figcaption>Littérature</figcaption>
+        </figure>
+    </section>
+    
+    <footer>
+        <p><a href=&quot;https://www.pierre-giraud.com&quot;>©Pierre Giraud</a> 2020</p>
+        <p>Reproduction à des fins commerciales interdite.</p>
+        <p>Merci de respecter le travail des auteurs en faisant un lien vers
+        le contenu original !</p>
+    </footer>
+</body>
+  
+  
+  
+  
+
+  <script src=&quot;https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js&quot;></script>
+</body>
+
+</html>
+ 
+"
+      sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation  allow-scripts allow-top-navigation-by-user-activation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write" allowTransparency="true"
+      allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+
+  </div>
+</body>
+</html>
